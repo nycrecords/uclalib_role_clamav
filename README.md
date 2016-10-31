@@ -1,7 +1,7 @@
 UCLALib Ansible Role: ClamAV
 =========
 
-Installs the ClamAV Antivirus Software
+Installs the ClamAV Antivirus Software and the ClamAV daemon
 
 Requirements
 ------------

@@ -2,3 +2,11 @@
 
 - name: install the latest version of ClamAV
   yum: name=clamav.x86_64 state=latest
+
+- name: install the latest version of ClamAV Daemon
+  yum: name=clamd state=latest
+
+- name: ensure the clamd service is enabled and started
+  service: name=clamd enabled=yes state=started
+
+
