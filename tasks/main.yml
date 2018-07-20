@@ -1,12 +1,20 @@
 ---
 
-- name: install the latest version of ClamAV
-  yum: name=clamav.x86_64 state=latest
+- name: Install the ClamAV packages
+  yum:
+    name: clamd
+    state: present
 
-- name: install the latest version of ClamAV Daemon
-  yum: name=clamd state=latest
+- name: Put in place the Clamd configuration file
+  copy:
+    src: "scan.conf"
+    dest: "/etc/clamd.d/scan.conf"
+    owner: root
+    group: root
+    mode: 0644
 
-- name: ensure the clamd service is enabled and started
-  service: name=clamd enabled=yes state=started
-
-
+- name: Ensure the Clamd services are enabled and started
+  service:
+    name: clamd@scan
+    enabled: yes
+    state: started
