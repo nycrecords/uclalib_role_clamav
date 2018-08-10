@@ -6,7 +6,7 @@ Installs the ClamAV Antivirus Software and the ClamAV daemon
 Requirements
 ------------
 
-Only supports RHEL-family servers at this time.
+Only supports RHEL/CentOS-family servers at this time.
 
 Role Variables
 --------------
@@ -16,7 +16,7 @@ None.
 Dependencies
 ------------
 
-None.
+Requires the EPEL repository be installed and enabled via `uclalib_role_epel`
 
 Example Playbook
 ----------------
@@ -31,9 +31,3 @@ Example Playbook
       - { role: uclalib_role_clamav }
 
 ```
-
-License
--------
-
-BSD
-
