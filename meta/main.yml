@@ -1,6 +1,5 @@
 ---
-dependencies:
-  - { role: uclalib_role_epel }
+dependencies: []
 
 galaxy_info:
   author: Stephen Gurnick - https://github.com/sgurnick
